@@ -16,8 +16,10 @@
 </template>
 
 <script>
+import * as netlifyIdentifyWidget from "netlify-identity-widget";
 import RequestAccount from "../../components/RequestAccount";
 import ThemeSwitch from "../../components/ThemeSwitch";
+
 
     export default {
         name: "SignIn",
@@ -31,8 +33,11 @@ import ThemeSwitch from "../../components/ThemeSwitch";
             }
         },    
         methods:{
-            toggleDarkMode(){
-                this.$store.commit('toggleDarkMode');
+            onSubmit() {
+                const email = this.email;
+                const password = this.password;
+                
+
             }
         }
     };
